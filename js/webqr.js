@@ -105,10 +105,9 @@ function read(a)
 {
     var html="<br>";
     if(a.indexOf("http://") === 0 || a.indexOf("https://") === 0)
-        html+="<a href='"+a+"'>"+a+"</a><br>";
+        html+="<a target='_blank' href='"+a+"'>"+a+"</a><br>";
     html+="<b>"+htmlEntities(a)+"</b><br><br>";
     document.getElementById("result").innerHTML=html;
-	location.href = a;
 }	
 
 function isCanvasSupported(){
@@ -183,7 +182,7 @@ function setwebcam()
 function setwebcam2(options)
 {
 	console.log(options);
-	document.getElementById("result").innerHTML="<blink>- scanning -</blink>";
+	document.getElementById("result").innerHTML="- scanning -";
     if(stype==1)
     {
         setTimeout(captureToCanvas, 500);    
@@ -216,8 +215,8 @@ function setwebcam2(options)
         n.webkitGetUserMedia({video:options, audio: false}, success, error);
     }
 
-   // document.getElementById("qrimg").style.opacity=0.2;
-   // document.getElementById("webcamimg").style.opacity=1.0;
+    document.getElementById("qrimg").style.opacity=0.2;
+    document.getElementById("webcamimg").style.opacity=1.0;
 
     stype=1;
     setTimeout(captureToCanvas, 500);
