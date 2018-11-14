@@ -129,21 +129,32 @@ QR Code scanner
 <tr>
 <td valign="top" align="center" width="50%">
 <table class="tsel" border="0">
-<tr>
-<td><button type=submit class="selector" id="webcamimg" onclick="setwebcam()" align="left" />Reload Camera</button></td>
-<td><button class="selector" id="qrimg" src="cam.png" onclick="setimg()" align="right"/>Choose File</button></td></tr>
-<tr><td colspan="2" align="center">
-<div id="outdiv">
-</div></td></tr>
+	<tr>
+		<td><button type=submit class="selector" id="webcamimg" onclick="setwebcam()" align="left" />Reload Camera</button></td>
+		<td><button class="selector" id="qrimg" src="cam.png" onclick="setimg()" align="right"/>Choose File</button></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<div id="outdiv">
+			</div>
+		</td>
+	</tr>
 </table>
 </td>
 </tr>
-<tr><td colspan="3" align="center">
-
-</td></tr>
-<tr><td colspan="3" align="center">
-<div id="result"></div>
-</td></tr>
+<tr>
+	<td>
+		<div class="btn" onclick="document.location = 'googlechrome://navigate?url=https://fourslick.github.io/qrscan/';">Open in Chrome</div>
+	</td>
+</tr>
+<tr>
+	<td colspan="3" align="center"></td>
+</tr>
+<tr>
+	<td colspan="3" align="center">
+		<div id="result"></div>
+	</td>
+</tr>
 </table>
 
 </div>&nbsp;
